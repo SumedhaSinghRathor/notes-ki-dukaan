@@ -3,7 +3,7 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <div className="hero w-screen flex flex-col items-center justify-center gap-[2em] my-[9em]">
+    <div className="hero w-94vw flex flex-col items-center justify-center gap-[2em] mx-[3em] py-[9em] border-x-1 border-black">
       <div>
         <h1 className="font-heading text-[5em] text-center underline my-[-0.25em]">
           Notes ki Dukaan
