@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --white: #fffeff;
+  --orange-white: #e6cbb6;
+  --light-orange: #f4a141;
+  --dark-orange: #f55c4c;
+  --black: #131013;
+}
+
+:root {
+  font-family: "Instrument Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
