@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Chalk Stick";
+  src: url(./assets/Chalk\ Stick.otf) format(opentype);
+}
+
+html {
+  scrollbar-width: none;
+}
+
 @theme {
+  --font-heading: "Chalk Stick", sans-serif;
   --white: #fffeff;
   --orange-white: #e6cbb6;
   --light-orange: #f4a141;
