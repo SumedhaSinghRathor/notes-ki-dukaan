@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="flex w-screen bg-zinc-900 items-center justify-between relative p-2.5">
+    <div className="flex w-screen bg-zinc-900 items-center justify-between relative py-2.5 px-7.5 text-[1.2em]">
       <span className="text-white">
         Made by{" "}
         <a
