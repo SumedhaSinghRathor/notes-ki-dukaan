@@ -1,0 +1,9 @@
+.feature3 {
+  background-color: #e6cbb6;
+}
+
+.img3 {
+  background-color: #f55c4c;
+  background: url(../../assets/feature3img.png);
+  background-size: cover;
+}
