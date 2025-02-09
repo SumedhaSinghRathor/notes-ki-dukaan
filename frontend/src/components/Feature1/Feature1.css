@@ -1,0 +1,15 @@
+:root {
+    font-family: "Instrument Sans", sans-serif;
+  
+    --white: #fffeff;
+    --orange-white: #e6cbb6;
+    --light-orange: #f4a141;
+    --dark-orange: #f55c4c;
+    --black: #131013;
+  }
+
+
+.img1 {
+    background: url(../../assets/Rectangle27.png);
+    background-size: cover;
+}
