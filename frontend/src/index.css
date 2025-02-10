@@ -12,11 +12,11 @@ html {
 
 @theme {
   --font-heading: "Chalk Stick", sans-serif;
-  --white: #fffeff;
-  --orange-white: #e6cbb6;
-  --light-orange: #f4a141;
-  --dark-orange: #f55c4c;
-  --black: #131013;
+  --color-white: #fffeff;
+  --color-orange-white: #e6cbb6;
+  --color-light-orange: #f4a141;
+  --color-dark-orange: #f55c4c;
+  --color-black: #131013;
 }
 
 :root {

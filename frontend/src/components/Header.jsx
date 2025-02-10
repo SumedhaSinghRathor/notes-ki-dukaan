@@ -1,9 +1,8 @@
 import React from "react";
-import "./Header.css";
 
 function Header() {
   return (
-    <div className="flex w-screen bg-zinc-900 items-center justify-center relative p-2.5">
+    <div className="flex w-screen bg-black items-center justify-center text-[1.2em] relative p-2.5">
       <p className="font-semibold text-white">
         Can't find what you're looking for?
       </p>
