@@ -14,6 +14,7 @@ function Home() {
         <Thumbnail />
       </div>
       <Footer className="fixed bottom-0" />
+      <p>This is from the Yashu branch</p>
     </div>
   );
 }
