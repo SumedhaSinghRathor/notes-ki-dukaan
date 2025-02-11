@@ -5,12 +5,12 @@ import Feature1 from "./components/Feature1/Feature1";
 import Feature2 from "./components/Feature2/Feature2";
 import Feature3 from "./components/Feature3/Feature3";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Thumbnail from "./pages/Home/Thumbnail";
 
 function App() {
   return (
     <div className="">
-      <Navbar />
+      <Thumbnail />
       {/* <Header />
       <Hero />
       <Feature1 />
