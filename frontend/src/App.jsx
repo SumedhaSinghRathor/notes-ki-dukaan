@@ -6,11 +6,12 @@ import Feature2 from "./components/Feature2/Feature2";
 import Feature3 from "./components/Feature3/Feature3";
 import Footer from "./components/Footer";
 import Thumbnail from "./pages/Home/Thumbnail";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="">
-      <Thumbnail />
+      <Home />
       {/* <Header />
       <Hero />
       <Feature1 />
