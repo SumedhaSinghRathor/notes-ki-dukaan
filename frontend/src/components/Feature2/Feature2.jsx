@@ -7,7 +7,7 @@ function Feature2() {
       <p className="max-w-[675px] text-[2em] font-semibold text-end">
         Bookmark your notes for easy access later.
       </p>
-      <div className="img2 w-[16em] h-[16em] shadow-[10px_10px_#131013] border-1 border-black"></div>
+      <div className="img2 w-[16em] h-[16em] shadow-[2em_2em_#131013] border-1 border-black"></div>
     </div>
   );
 }
