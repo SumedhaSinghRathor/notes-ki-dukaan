@@ -2,10 +2,10 @@ import React from "react";
 
 function Thumbnail() {
   return (
-    <div className="w-[300px]">
-      <div className="thumbnailimg w-[100%] h-[300px] bg-light-orange"></div>
+    <div className="w-[280px]">
+      <div className="thumbnailimg w-[100%] h-[280px] bg-light-orange border-1 border-black"></div>
       <div className="info flex flex-col gap-[4px]">
-        <div className="title_bookmark flex justify-between items-center border-1 border-black">
+        <div className="title_bookmark flex justify-between items-center">
           <div className="title font-bold text-[24px]">Basic Memory Unit</div>
           <div className="bookmark text-[24px]">🔖</div>
         </div>
