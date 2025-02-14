@@ -7,6 +7,7 @@ function Upload() {
         <input
           type="file"
           className="w-[20em] h-full rounded-[1em] bg-white border-1 border-black"
+          multiple
         />
       </div>
       <div className="form flex flex-col gap-[1em]">
@@ -61,7 +62,7 @@ function Upload() {
           <div className="type flex justify-evenly">
             <div className="handwritten">
               <label htmlFor="">
-                <input type="checkbox" className="bg-orange-white" />{" "}
+                <input type="checkbox" />
                 Handwritten
               </label>
             </div>
