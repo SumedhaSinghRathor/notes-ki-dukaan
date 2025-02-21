@@ -1,6 +1,6 @@
 import React from "react";
 import "./Feature3.css";
-import img from "../../assets/feature3img";
+import img from "../../assets/feature3img.png";
 
 function Feature3() {
   return (

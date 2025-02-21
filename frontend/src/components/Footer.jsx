@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="flex w-screen fixed-0 bottom-0 bg-black items-center justify-between py-2.5 px-7.5 text-[1.2em]">
-      <span className="text-white">
+    <div className="flex w-screen fixed-0 bottom-0 bg-black items-center justify-between py-2.5 px-7.5">
+      <span className="text-white text-sm">
         Made by{" "}
         <u>
           <a
@@ -23,10 +23,11 @@ function Footer() {
           </a>
         </u>
       </span>
-      <span>
+      <span className="text-xl">
         <a
           href="https://github.com/SumedhaSinghRathor/notes-ki-dukaan"
           target="_blank"
+          title=""
         >
           🧡
         </a>

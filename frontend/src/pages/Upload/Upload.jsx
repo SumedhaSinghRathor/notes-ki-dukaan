@@ -7,7 +7,6 @@ function Upload() {
         <input
           type="file"
           className="w-[20em] h-full rounded-[1em] bg-white border-1 border-black"
-          multiple
         />
       </div>
       <div className="form flex flex-col gap-[1em]">
@@ -55,27 +54,26 @@ function Upload() {
               Topics: <br />
               <input
                 type="text"
-                className="bg-white border-1 border-black rounded-[0.5em] w-[25em] px-[2em] py-[0.25em]"
+                className="bg-white border-1 border-black rounded-[0.5em] w-[25em] px-[0.5em] py-[0.25em]"
               />
             </label>
           </div>
           <div className="type flex justify-evenly">
             <div className="handwritten">
-              <label htmlFor="">
-                <input type="checkbox" />
-                Handwritten
+              <label htmlFor="" className="flex items-center">
+                <input type="checkbox" /> &ensp; Handwritten
               </label>
             </div>
             <div className="digital">
-              <label htmlFor="">
-                <input type="checkbox" /> Digital
+              <label htmlFor="" className="flex items-center">
+                <input type="checkbox" /> &ensp; Digital
               </label>
             </div>
           </div>
         </div>
-        <div className="upload font-bold text-center px-[2em] py-[0.5em] border-1 border-black rounded-[0.5em] bg-dark-orange text-black w-[25em]">
+        <button className="upload font-bold text-center px-[2em] py-[0.5em] border-1 border-black rounded-[0.5em] bg-dark-orange text-black w-[25em]">
           UPLOAD
-        </div>
+        </button>
       </div>
     </div>
   );
