@@ -1,11 +1,14 @@
 import "./App.css";
-import Rating from "./components/Rating/Rating";
-import View from "./pages/View/View";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Feature1 from "./components/Feature1/Feature1";
 
 function App() {
   return (
     <div className="w-screen">
-      <View />
+      <Header />
+      <Hero />
+      <Feature1 />
     </div>
   );
 }
