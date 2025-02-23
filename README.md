@@ -1,5 +1,6 @@
 # Notes Ki Dukaan
 
+```
 .
 ├── frontend/
 │   ├── node_modules
@@ -48,5 +49,6 @@
 │   ├── index.html
 │   ├── package-lock.json
 │   ├── package.json
-│   └── vite.config.json        
+│   └── vite.config.json
 └── backend
+```
