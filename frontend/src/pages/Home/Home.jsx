@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import HomeDisplay from "./HomeDisplay";
 import Footer from "../../components/Footer";
-import UploadButton from "../Upload/UploadButton";
+import UploadButton from "../../components/UploadButton";
 
 function Home() {
   return (
