@@ -1,14 +1,15 @@
 import React from "react";
-import "./Feature3.css";
 import img from "../../assets/feature3img.png";
 
 function Feature3() {
   return (
-    <div className="feature3 bg-orange-white w-94vw flex flex-wrap items-center justify-between mx-[3em] p-[4em] border-1 border-black">
-      <div className="img3 w-[16em] h-[16em] shadow-[2em_2em_#131013] border-1 border-black">
-        {img}
-      </div>
-      <p className="max-w-[675px] text-[2em] font-semibold text-start">
+    <div className="feature3 bg-orange-white w-94vw flex flex-wrap items-center justify-around mx-12 p-16 border-x-1 border-t-1 border-black">
+      <img
+        src={img}
+        alt=""
+        className="img3  w-64 h-64 shadow-[1em_1em_black] border-1 border-black"
+      />
+      <p className="max-w-md text-3xl font-semibold text-start">
         Helps you focus more on your studies than browsing around for study
         materials.
       </p>

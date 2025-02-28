@@ -1,14 +1,10 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import View from "./pages/View/View";
-import Footer from "./components/Footer";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <div className="w-screen">
-      <Navbar />
-      <View />
-      <Footer />
+    <div className="w-screen min-h-screen max-h-fit">
+      <Home />
     </div>
   );
 }

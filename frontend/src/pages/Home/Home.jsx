@@ -1,19 +1,16 @@
 import React from "react";
-import Thumbnail from "./Thumbnail";
 import Navbar from "../../components/Navbar";
+import HomeDisplay from "./HomeDisplay";
 import Footer from "../../components/Footer";
+import UploadButton from "../Upload/UploadButton";
 
 function Home() {
   return (
-    <div className="flex flex-col justify-between h-screen">
+    <div>
       <Navbar />
-      <div className="flex flex-wrap justify-around p-[1.6em]">
-        <Thumbnail />
-        <Thumbnail />
-        <Thumbnail />
-        <Thumbnail />
-      </div>
-      <Footer className="fixed bottom-0" />
+      <HomeDisplay />
+      <Footer />
+      <UploadButton />
     </div>
   );
 }
