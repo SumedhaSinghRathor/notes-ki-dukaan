@@ -1,10 +1,10 @@
 import "./App.css";
-import Upload from "./pages/Upload/Upload";
+import CreateAcc from "./pages/CreateAcc/CreateAcc";
 
 function App() {
   return (
     <div className="w-screen min-h-screen max-h-fit">
-      <Upload />
+      <CreateAcc />
     </div>
   );
 }

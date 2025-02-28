@@ -8,7 +8,7 @@ function Upload() {
     <div className="w-screen h-screen flex flex-col justify-between items-center">
       <Navbar />
       <UploadDialog />
-      <Footer className="fixed bottom-0" />
+      <Footer />
     </div>
   );
 }

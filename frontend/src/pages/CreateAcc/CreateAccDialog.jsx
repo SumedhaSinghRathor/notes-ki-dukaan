@@ -2,13 +2,13 @@ import React from "react";
 
 function CreateAcc() {
   return (
-    <div className="bg-orange-white w-fit border-1 p-[100px] flex flex-col gap-[32px] rounded-[20px]">
-      <div className="flex flex-col gap-[0.5em]">
+    <div className="bg-orange-white w-fit border-1 p-12 flex flex-col gap-8 rounded-2xl">
+      <div className="flex flex-col gap-1">
         <div className="">
           <label htmlFor="">
             Enter Username: <br />
             <input
-              className="bg-white border-1 border-black rounded-[0.5em] w-[560px] px-[2em] py-[0.25em]"
+              className="bg-white border-1 border-black rounded-lg w-80 px-4 py-1"
               type="text"
               placeholder="Username"
             />
@@ -20,16 +20,12 @@ function CreateAcc() {
             <select
               name=""
               id=""
-              className="bg-white border-1 border-black rounded-[0.5em] w-[240px] p-[0.25em]"
+              className="bg-white border-1 border-black rounded-lg w-36 p-1"
             >
               <option value="">1st</option>
               <option value="">2nd</option>
               <option value="">3rd</option>
               <option value="">4th</option>
-              <option value="">5th</option>
-              <option value="">6th</option>
-              <option value="">7th</option>
-              <option value="">8th</option>
             </select>
           </label>
           <label htmlFor="">
@@ -37,7 +33,7 @@ function CreateAcc() {
             <select
               name=""
               id=""
-              className="bg-white border-1 border-black rounded-[0.5em] w-[240px] p-[0.25em]"
+              className="bg-white border-1 border-black rounded-lg w-36 p-1"
             >
               <option value="">1st</option>
               <option value="">2nd</option>
@@ -52,7 +48,7 @@ function CreateAcc() {
         </div>
       </div>
       <div>
-        <button className="font-bold text-center p-[2em] border-1 border-black rounded-[16px] bg-dark-orange text-black w-[560px]">
+        <button className="font-bold text-center p-2 border-1 border-black rounded-xl bg-dark-orange text-black w-80">
           CREATE UPLOAD
         </button>
       </div>
