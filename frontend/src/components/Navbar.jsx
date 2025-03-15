@@ -1,26 +1,27 @@
 import React from "react";
 import logo from "../assets/logo.png";
 
-function Navbar() {
+function Test() {
   return (
-    <div className="navbar flex items-center justify-between w-screen bg-black text-white font-medium px-7.5 py-1">
-      <div className="flex items-center gap-2 font-medium leading-5">
-        <div className="h-12 w-12 text-3xl rounded-xl">
+    <div className="navbar bg-black text-white flex justify-between items-center px-7.5 py-1 gap-12">
+      <div className="logo flex items-center w-fit gap-2 shrink-0">
+        <div className="size-12">
           <img src={logo} className="fill-white" alt="" />
         </div>
-        NOTES <br />
-        KI DUKAAN
+        <p className="font-medium leading-5 text-lg">
+          NOTES KI <br /> DUKAAN
+        </p>
       </div>
-      <div>
+      <div className="search w-full">
         <input
           type="search"
-          className="text-black bg-dark-orange font-bold w-full rounded-2xl px-8"
           placeholder="Search"
+          className="font-bold text-black rounded-2xl bg-dark-orange px-6 w-full"
         />
       </div>
-      <div className="h-10 w-10 bg-white rounded-4xl"></div>
+      <div className="pfp size-10 rounded-lg bg-white shrink-0"></div>
     </div>
   );
 }
 
-export default Navbar;
+export default Test;

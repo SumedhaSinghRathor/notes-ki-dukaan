@@ -1,10 +1,10 @@
 import "./App.css";
-import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="w-screen min-h-screen max-h-fit">
-      <Home />
+      <Navbar />
     </div>
   );
 }
