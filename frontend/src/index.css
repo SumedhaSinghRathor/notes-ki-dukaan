@@ -8,6 +8,13 @@
 
 html {
   scrollbar-width: none;
+  box-sizing: border-box;
+}
+
+@layer {
+  .no-scrollbar::-webkit-scrollbar {
+    scrollbar-width: none;
+  }
 }
 
 @theme {
