@@ -15,10 +15,10 @@ function Thumbnail() {
         <div className="faculty text-base">Anil Kumar Swain</div>
         <div className="tags_rating flex justify-between items-center">
           <div className="tags flex justify-between gap-3">
-            <div className="tag_1 bg-light-orange py-2 px-4 rounded-lg border-1 border-black text-xs">
+            <div className="tag bg-light-orange py-1 px-2 rounded-lg border-1 border-black text-xs">
               COA
             </div>
-            <div className="tag_2 bg-light-orange py-2 px-4 rounded-lg border-1 border-black text-xs">
+            <div className="tag bg-light-orange py-1 px-2 rounded-lg border-1 border-black text-xs">
               HPC
             </div>
           </div>

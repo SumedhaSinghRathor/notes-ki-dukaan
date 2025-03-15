@@ -21,7 +21,7 @@ function UploadModal({ onClose }) {
             className="w-70 h-full rounded-2xl bg-white border-1 border-black hidden"
           />
           <i className="bx bxs-plus-circle text-orange-white text-6xl"></i>
-          <span className="mt-3 flex-wrap hidden">{}</span>
+          <span className="mt-3 flex-wrap">Uploaded File Name</span>
         </div>
         <div className="form flex flex-col gap-4">
           <div className="info flex flex-col gap-2">
