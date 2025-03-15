@@ -1,10 +1,10 @@
 import "./App.css";
-import CreateAcc from "./pages/CreateAcc/CreateAcc";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="w-screen min-h-screen max-h-fit">
-      <CreateAcc />
+      <Home />
     </div>
   );
 }

@@ -15,13 +15,13 @@ function UploadModal({ onClose }) {
       className="fixed inset-0 flex justify-center items-center bg-black/75 backdrop-blur-sm"
     >
       <div className="flex bg-orange-white border-1 border-black w-fit h-fit rounded-2xl gap-8 p-12">
-        <div className="file w-70 border-black border-1 rounded-2xl flex flex-col bg-white">
+        <div className="file w-60 border-black border-1 rounded-2xl flex flex-col bg-white justify-center items-center">
           <input
             type="file"
             className="w-70 h-full rounded-2xl bg-white border-1 border-black hidden"
           />
-          <i className="bx bxs-plus-circle text-orange-white text-6xl self-center justify-self-center"></i>
-          <span className="mt-3 flex-wrap">{}</span>
+          <i className="bx bxs-plus-circle text-orange-white text-6xl"></i>
+          <span className="mt-3 flex-wrap hidden">{}</span>
         </div>
         <div className="form flex flex-col gap-4">
           <div className="info flex flex-col gap-2">
