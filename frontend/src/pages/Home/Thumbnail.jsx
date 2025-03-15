@@ -13,8 +13,8 @@ function Thumbnail() {
         </div>
 
         <div className="faculty text-base">Anil Kumar Swain</div>
-        <div className="tags_rating flex justify-between items-center">
-          <div className="tags flex justify-between gap-3">
+        <div className="tags_rating flex justify-between gap-2 items-center w-ful">
+          <div className="tags flex justify-between gap-2 whitespace-nowrap overflow-clip">
             <div className="tag bg-light-orange py-1 px-2 rounded-lg border-1 border-black text-xs">
               COA
             </div>

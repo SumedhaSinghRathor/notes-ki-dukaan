@@ -15,10 +15,13 @@ function UploadModal({ onClose }) {
       className="fixed inset-0 flex justify-center items-center bg-black/75 backdrop-blur-sm"
     >
       <div className="flex bg-orange-white border-1 border-black w-fit h-fit rounded-2xl gap-8 p-12">
-        <div className="file w-60 border-black border-1 rounded-2xl flex flex-col bg-white justify-center items-center">
+        <div
+          className="file w-60 border-black border-1 rounded-2xl flex flex-col bg-white justify-center items-center cursor-pointer"
+          onClick={() => document.querySelector(".input-field").click()}
+        >
           <input
             type="file"
-            className="w-70 h-full rounded-2xl bg-white border-1 border-black hidden"
+            className="input-field w-70 h-full rounded-2xl bg-white border-1 border-black hidden"
           />
           <i className="bx bxs-plus-circle text-orange-white text-6xl"></i>
           <span className="mt-3 flex-wrap">Uploaded File Name</span>

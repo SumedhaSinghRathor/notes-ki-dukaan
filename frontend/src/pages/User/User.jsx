@@ -33,11 +33,10 @@ function User() {
               Bookmarks
             </div>
           </div>
-          <div className="flex p-4 gap-4 overflow-auto no-scrollbar flex-wrap flex-auto">
-            <Thumbnail />
-            <Thumbnail />
-            <Thumbnail />
-            <Thumbnail />
+          <div className="flex justify-between p-4 gap-6 overflow-auto no-scrollbar flex-wrap flex-auto">
+            {Array.from({ length: 9 }).map((_) => (
+              <Thumbnail />
+            ))}
           </div>
         </div>
       </div>
