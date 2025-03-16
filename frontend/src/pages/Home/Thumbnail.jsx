@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Thumbnail() {
   const handleClick = () => console.log("Turn to solid bookmark");
 
   return (
-    <div className="w-3xs flex flex-col gap-1.5">
+    <Link to="/view" className="w-3xs flex flex-col gap-1.5">
       <div className="thumbnailimg w-full h-44 bg-light-orange border-1 border-black"></div>
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
@@ -31,7 +32,7 @@ function Thumbnail() {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
