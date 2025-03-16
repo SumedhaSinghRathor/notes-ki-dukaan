@@ -20,9 +20,9 @@ function User() {
             Rank : <b>1</b> <br />
             Total Uploads: <b>75</b>
           </div>
-          <div className="heatmap bg-black p-2 rounded-lg flex flex-wrap gap-1">
-            {Array.from({ length: 12 * 17 }).map((_) => (
-              <div className="size-4 bg-white" />
+          <div className="heatmap bg-black p-2 rounded-lg flex justify-between">
+            {Array.from({ length: 7 }).map((_) => (
+              <div className="size-7 bg-white" />
             ))}
           </div>
         </div>
@@ -34,7 +34,7 @@ function User() {
             </div>
           </div>
           <div className="flex justify-between p-4 gap-6 overflow-auto no-scrollbar flex-wrap flex-auto">
-            {Array.from({ length: 9 }).map((_) => (
+            {Array.from({ length: 3 }).map((_) => (
               <Thumbnail />
             ))}
           </div>
