@@ -7,17 +7,20 @@ import Home from "./pages/Home/Home";
 import User from "./pages/User/User";
 import View from "./pages/View/View";
 
+import Landing from "./pages/Landing/Landing";
+
 function App() {
   return (
     <div className="w-screen min-h-screen max-h-fit">
-      <Navbar />
+      {/* <Navbar />
       <Routes>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/user" element={<User />}></Route>
         <Route path="/view" element={<View />}></Route>
       </Routes>
       <Footer />
-      <UploadButton />
+      <UploadButton /> */}
+      <Landing />
     </div>
   );
 }

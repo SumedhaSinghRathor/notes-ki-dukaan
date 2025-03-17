@@ -7,12 +7,12 @@ function Home() {
   return (
     <div>
       <div className="w-full h-fit p-10 grid grid-cols-4 grid-flow-row auto-rows-min gap-12">
-        {Array.from({ length: 5 }).map((_) => (
+        {Array.from({ length: 6 }).map((_) => (
           <Thumbnail />
         ))}
       </div>
       <div
-        className="more mx-auto rounded-lg my-2 align-center border-2 font-bold border-black px-10 py-2 w-fit hover:bg-dark-orange cursor-pointer"
+        className="more mx-auto rounded-lg mb-10 align-center border-2 font-bold border-black px-10 py-2 w-fit hover:bg-dark-orange cursor-pointer"
         onClick={handleClick}
       >
         Load More
