@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Thumbnail() {
-  const handleClick = () => console.log("Turn to solid bookmark");
-
   return (
     <div className="w-3xs flex flex-col gap-1.5">
       <Link className="thumbnailimg w-full h-44 bg-light-orange border-1 border-black"></Link>
@@ -26,10 +24,7 @@ function Thumbnail() {
           </div>
           <div className="rating flex justify-between gap-2 items-center">
             <div className="num">4.27</div>
-            <i
-              className="bx bxs-star text-2xl text-dark-orange"
-              onClick={handleClick}
-            ></i>
+            <i className="bx bxs-star text-2xl text-dark-orange"></i>
           </div>
         </div>
       </div>
