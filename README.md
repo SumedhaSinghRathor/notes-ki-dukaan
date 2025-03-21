@@ -13,30 +13,28 @@
 │   │   │   ├── logo.png
 │   │   │   └── logo.svg
 │   │   ├── components/
-│   │   │   ├── Feature1/
-│   │   │   │   └── Feature1.jsx
-│   │   │   ├── Feature2/
-│   │   │   │   └── Feature2.jsx
-│   │   │   ├── Feature3/
-│   │   │   │   └── Feature3.jsx
 │   │   │   ├── Rating/
 │   │   │   │   ├── Rating.jsx
 │   │   │   │   └── Star.jsx
 │   │   │   ├── Cta.jsx
+│   │   │   ├── Feature.jsx
 │   │   │   ├── Footer.jsx
 │   │   │   ├── Header.jsx
 │   │   │   ├── Hero.jsx
-│   │   │   └── Navbar.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   └── UploadButton.jsx
 │   │   ├── pages/
 │   │   │   ├── CreateAcc/
 │   │   │   │   └── CreateAccDialog.jsx
 │   │   │   ├── Home/
 │   │   │   │   ├── Home.jsx
 │   │   │   │   └── Thumbnail.jsx
+│   │   │   ├── Landing/
+│   │   │   │   └── Landing.jsx
 │   │   │   ├── Upload/
-│   │   │   │   └── Upload.jsx
+│   │   │   │   ├── Upload.jsx
+│   │   │   │   └── UploadModal.jsx
 │   │   │   ├── User/
-│   │   │   │   ├── Banner.jsx
 │   │   │   │   └── User.jsx
 │   │   │   └── View/
 │   │   │       └── View.jsx
