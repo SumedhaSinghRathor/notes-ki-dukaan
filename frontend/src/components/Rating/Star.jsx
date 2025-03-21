@@ -14,7 +14,7 @@ const Star = ({ index, rating, onRatingChange }) => {
 
   return (
     <div className="relative">
-      <i className={`bx ${starClass} text-5xl text-dark-orange`}></i>
+      <i className={`bx ${starClass} text-4xl text-dark-orange`}></i>
       <button
         className="absolute top-0 left-0 w-1/2 h-full cursor-pointer"
         onClick={handleLeftHalfClick}

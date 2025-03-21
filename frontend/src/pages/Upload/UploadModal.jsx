@@ -88,7 +88,10 @@ function UploadModal({ onClose }) {
               </div>
             </div>
           </div>
-          <button className="uploadModal font-bold text-center px-8 py-2 border-1 border-black rounded-lg bg-dark-orange text-black w-100">
+          <button
+            id="uploadModal"
+            className="uploadModal font-bold text-center px-8 py-2 border-1 border-black rounded-lg bg-dark-orange text-black w-100 cursor-pointer"
+          >
             UPLOAD
           </button>
         </div>

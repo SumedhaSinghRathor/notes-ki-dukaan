@@ -8,7 +8,10 @@ function User() {
         <div className="flex items-center gap-4 relative top-8 left-16">
           <div className="pfp size-30 bg-white"></div>
           <div className="name">
-            <h1 className="text-4xl font-bold leading-10">UserName</h1>
+            <div className="flex items-baseline gap-1">
+              <h1 className="text-4xl font-bold leading-10">UserName</h1>
+              <i className="bx bxs-edit text-2xl cursor-pointer"></i>
+            </div>
             <p>#1 Uploader</p>
           </div>
         </div>

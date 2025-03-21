@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
       <div className="w-full h-fit p-10 grid grid-cols-4 grid-flow-row auto-rows-min gap-12">
-        {Array.from({ length: 6 }).map((_) => (
+        {Array.from({ length: 9 }).map((_) => (
           <Thumbnail />
         ))}
       </div>
