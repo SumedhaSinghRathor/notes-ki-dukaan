@@ -4,7 +4,7 @@ import Cta from "./Cta";
 function Hero() {
   return (
     <div className="hero w-94vw flex flex-col items-center justify-center gap-8 mx-12 py-36 border-x-1 border-b-1 border-black">
-      <div className="max-md:scale-75 max-sm:scale-50">
+      <div className="max-md:scale-80 max-sm:scale-60">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="620"
