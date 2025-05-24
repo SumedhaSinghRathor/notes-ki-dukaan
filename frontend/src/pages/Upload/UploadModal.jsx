@@ -14,7 +14,7 @@ function UploadModal({ onClose }) {
       onClick={closeModal}
       className="fixed inset-0 flex justify-center items-center bg-black/75 backdrop-blur-sm"
     >
-      <div className="flex bg-orange-white border-1 border-black w-fit h-fit rounded-2xl gap-8 p-12">
+      <form className="flex bg-orange-white border-1 border-black w-fit h-fit rounded-2xl gap-8 p-12">
         <div
           className="file w-60 border-black border-1 rounded-2xl flex flex-col bg-white justify-center items-center cursor-pointer"
           onClick={() => document.querySelector(".input-field").click()}
@@ -22,6 +22,7 @@ function UploadModal({ onClose }) {
           <input
             type="file"
             className="input-field w-70 h-full rounded-2xl bg-white border-1 border-black hidden"
+            required
           />
           <i className="bx bxs-plus-circle text-orange-white text-6xl"></i>
           <span className="mt-3 flex-wrap">Uploaded File Name</span>
@@ -33,7 +34,7 @@ function UploadModal({ onClose }) {
                 Title of Document: <br />
                 <input
                   type="text"
-                  className="bg-white border-1 border-black rounded-lg w-100 px-2 py-1"
+                  className="bg-white border-1 border-black rounded-lg w-100 px-2 py-1 focus:outline-none"
                 />
               </label>
             </div>
@@ -42,7 +43,7 @@ function UploadModal({ onClose }) {
                 Faculty: <br />
                 <input
                   type="text"
-                  className="bg-white border-1 border-black rounded-lg w-100 px-2 py-1"
+                  className="bg-white border-1 border-black rounded-lg w-100 px-2 py-1 focus:outline-none"
                 />
               </label>
             </div>
@@ -52,7 +53,7 @@ function UploadModal({ onClose }) {
                   Year: <br />
                   <input
                     type="year"
-                    className="bg-white border-1 border-black rounded-lg w-40 px-2 py-1"
+                    className="bg-white border-1 border-black rounded-lg w-40 px-2 py-1 focus:outline-none"
                   />
                 </label>
               </div>
@@ -61,7 +62,7 @@ function UploadModal({ onClose }) {
                   Semester: <br />{" "}
                   <input
                     type="text"
-                    className="bg-white border-1 border-black rounded-lg w-40 px-2 py-1"
+                    className="bg-white border-1 border-black rounded-lg w-40 px-2 py-1 focus:outline-none"
                   />
                 </label>
               </div>
@@ -71,7 +72,7 @@ function UploadModal({ onClose }) {
                 Topics: <br />
                 <input
                   type="text"
-                  className="bg-white border-1 border-black rounded-lg w-100 px-2 py-1"
+                  className="bg-white border-1 border-black rounded-lg w-100 px-2 py-1 focus:outline-none"
                 />
               </label>
             </div>
@@ -90,12 +91,12 @@ function UploadModal({ onClose }) {
           </div>
           <button
             id="uploadModal"
-            className="uploadModal font-bold text-center px-8 py-2 border-1 border-black rounded-lg bg-dark-orange text-black w-100 cursor-pointer"
+            className="uploadModal font-bold text-center px-8 py-2 border-1 border-black rounded-lg bg-dark-orange text-black w-100 cursor-pointer active:bg-black active:text-dark-orange"
           >
             UPLOAD
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

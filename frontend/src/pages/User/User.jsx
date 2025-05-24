@@ -1,10 +1,13 @@
 import React from "react";
 import Thumbnail from "../Home/Thumbnail";
+import ThumbnailList from "../Home/ThumbnailList";
 
 function User() {
+  const view = false;
+
   return (
     <>
-      <div className="banner bg-dark-orange h-32 overflow-hidden">
+      <div className="banner bg-dark-orange h-36 overflow-hidden">
         <div className="flex items-center gap-4 relative top-8 left-16">
           <div className="pfp size-30 bg-white"></div>
           <div className="name">
@@ -36,10 +39,29 @@ function User() {
               Bookmarks
             </div>
           </div>
-          <div className="flex justify-between p-4 gap-6 overflow-auto no-scrollbar flex-wrap flex-auto">
-            {Array.from({ length: 3 }).map((_) => (
-              <Thumbnail />
-            ))}
+          <div className="p-4">
+            <div className="flex items-center w-fit rounded hidden">
+              <div className="flex bg-black rounded">
+                <i className="bx bxs-grid-alt text-3xl p-1 text-white"></i>
+              </div>
+              <div className="flex active:bg-black active:rounded">
+                <i className="bx bx-list-ul text-3xl p-1 active:text-white"></i>
+              </div>
+            </div>
+
+            {view ? (
+              <div className="grid grid-cols-3 gap-9">
+                {Array.from({ length: 9 }).map((_, index) => (
+                  <Thumbnail key={index} />
+                ))}
+              </div>
+            ) : (
+              <div>
+                {Array.from({ length: 9 }).map((_, index) => (
+                  <ThumbnailList key={index} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

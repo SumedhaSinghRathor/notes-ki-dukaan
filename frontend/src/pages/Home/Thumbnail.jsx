@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Thumbnail() {
   return (
-    <Link to="/view" className="w-3xs flex flex-col gap-1.5">
+    <Link to="/view" className="group w-3xs flex flex-col gap-1.5 mx-auto">
       <div className="thumbnailimg w-full h-44 bg-light-orange border-1 border-black"></div>
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
-          <div className="title font-bold text-2xl hover:underline">
+          <div className="title font-bold text-2xl group-hover:underline">
             Basic Memory Unit
           </div>
           <i className="bx bx-bookmark text-2xl flex justify-center items-center text-dark-orange"></i>
