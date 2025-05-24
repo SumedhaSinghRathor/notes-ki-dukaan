@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 function Thumbnail() {
   return (
-    <div className="w-3xs flex flex-col gap-1.5">
-      <Link className="thumbnailimg w-full h-44 bg-light-orange border-1 border-black"></Link>
+    <Link to="/view" className="w-3xs flex flex-col gap-1.5">
+      <div className="thumbnailimg w-full h-44 bg-light-orange border-1 border-black"></div>
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
-          <Link to="/view" className="title font-bold text-2xl hover:underline">
+          <div className="title font-bold text-2xl hover:underline">
             Basic Memory Unit
-          </Link>
+          </div>
           <i className="bx bx-bookmark text-2xl flex justify-center items-center text-dark-orange"></i>
         </div>
 
@@ -28,7 +28,7 @@ function Thumbnail() {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -21,7 +21,7 @@ function Test() {
           <input
             type="search"
             placeholder="Search"
-            className="font-bold text-black rounded-2xl bg-dark-orange px-6 w-full"
+            className="font-bold focus:outline-none text-black rounded-2xl bg-dark-orange px-6 w-full"
           />
         </li>
         <Link to="/user">
