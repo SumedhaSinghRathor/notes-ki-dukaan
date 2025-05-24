@@ -1,4 +1,3 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -9,7 +8,7 @@ import View from "./pages/View/View";
 import Landing from "./pages/Landing/Landing";
 
 function App() {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   return (
     <div className="w-screen min-h-screen max-h-fit flex flex-col justify-between">
