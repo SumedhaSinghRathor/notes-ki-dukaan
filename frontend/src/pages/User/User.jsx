@@ -3,11 +3,11 @@ import Thumbnail from "../Home/Thumbnail";
 import ThumbnailList from "../Home/ThumbnailList";
 
 function User() {
-  const view = false;
+  const list = true;
 
   return (
     <>
-      <div className="banner bg-dark-orange h-36 overflow-hidden">
+      <div className="banner bg-dark-orange h-36 w-full overflow-hidden">
         <div className="flex items-center gap-4 relative top-8 left-16">
           <div className="pfp size-30 bg-white"></div>
           <div className="name">
@@ -19,16 +19,39 @@ function User() {
           </div>
         </div>
       </div>
-      <div className="content w-full justify-between p-8 flex gap-8">
-        <div className="box bg-orange-white w-72 h-fit border-1 border-black p-4 rounded-xl flex flex-col gap-4 shrink-0">
+      <div className="content w-full justify-between p-8 flex gap-8 max-sm:flex-col">
+        <div className="box bg-orange-white w-72 h-fit border-1 border-black p-4 rounded-xl flex flex-col gap-4 shrink-0 mx-auto">
           <div className="">
             Semester / Date Joined <br />
             Rank : <b>1</b> <br />
             Total Uploads: <b>75</b>
           </div>
-          <div className="heatmap bg-black p-2 rounded-lg flex justify-between">
-            {Array.from({ length: 7 }).map((_) => (
-              <div className="size-7 bg-white" />
+          <div className="heatmap bg-black p-2 rounded-lg grid grid-cols-7 gap-2">
+            <div className="text-white flex justify-center items-center font-mono">
+              Su
+            </div>
+            <div className="text-white flex justify-center items-center font-mono">
+              Mo
+            </div>
+            <div className="text-white flex justify-center items-center font-mono">
+              Tu
+            </div>
+            <div className="text-white flex justify-center items-center font-mono">
+              We
+            </div>
+            <div className="text-white flex justify-center items-center font-mono">
+              Th
+            </div>
+            <div className="text-white flex justify-center items-center font-mono">
+              Fr
+            </div>
+            <div className="text-white flex justify-center items-center font-mono">
+              Sa
+            </div>
+            {Array.from({ length: 30 }).map((index) => (
+              <div className="size-7 bg-white text-black hover:bg-dark-orange active:bg-light-orange">
+                {index}
+              </div>
             ))}
           </div>
         </div>
@@ -49,8 +72,8 @@ function User() {
               </div>
             </div>
 
-            {view ? (
-              <div className="grid grid-cols-3 gap-9">
+            {list ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-7 gap-9">
                 {Array.from({ length: 9 }).map((_, index) => (
                   <Thumbnail key={index} />
                 ))}

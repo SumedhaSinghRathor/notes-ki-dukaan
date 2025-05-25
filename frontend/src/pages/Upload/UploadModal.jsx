@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 function UploadModal({ onClose }) {
   const modalRef = useRef();
@@ -8,24 +8,37 @@ function UploadModal({ onClose }) {
     }
   };
 
+  const [image, setImage] = useState(null);
+  const [fileName, setFileName] = useState("No Selected File");
   return (
     <div
       ref={modalRef}
       onClick={closeModal}
       className="fixed inset-0 flex justify-center items-center bg-black/75 backdrop-blur-sm"
     >
-      <form className="flex bg-orange-white border-1 border-black w-fit h-fit rounded-2xl gap-8 p-12">
+      <form className="flex bg-orange-white border-1 border-black w-fit h-fit rounded-2xl gap-8 p-12 items-center">
         <div
-          className="file w-60 border-black border-1 rounded-2xl flex flex-col bg-white justify-center items-center cursor-pointer"
+          className="file w-60 min-h-84 border-black border-1 rounded-2xl flex flex-col bg-white justify-center items-center cursor-pointer overflow-clip"
           onClick={() => document.querySelector(".input-field").click()}
         >
           <input
             type="file"
-            className="input-field w-70 h-full rounded-2xl bg-white border-1 border-black hidden"
+            className="input-field hidden"
             required
+            onChange={({ target: { files } }) => {
+              files[0] && setFileName(files[0].name);
+
+              if (files) {
+                setImage(URL.createObjectURL(files[0]));
+              }
+            }}
           />
-          <i className="bx bxs-plus-circle text-orange-white text-6xl"></i>
-          <span className="mt-3 flex-wrap">Uploaded File Name</span>
+          {image ? (
+            <img src={image} className="w-full h-auto" alt="filename" />
+          ) : (
+            <i className="bx bxs-plus-circle text-orange-white text-6xl" />
+          )}
+          <span className="mt-3 flex-wrap text-center">{fileName}</span>
         </div>
         <div className="form flex flex-col gap-4">
           <div className="info flex flex-col gap-2">
@@ -50,7 +63,7 @@ function UploadModal({ onClose }) {
             <div className="time flex justify-between">
               <div className="year">
                 <label htmlFor="">
-                  Year: <br />
+                  Branch: <br />
                   <input
                     type="year"
                     className="bg-white border-1 border-black rounded-lg w-40 px-2 py-1 focus:outline-none"
