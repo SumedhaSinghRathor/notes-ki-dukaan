@@ -1,13 +1,13 @@
-package com.genuine.oauth;
+package com.nkd.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LearnSpringOAuthApplication {
+public class BackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LearnSpringOAuthApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 
 }

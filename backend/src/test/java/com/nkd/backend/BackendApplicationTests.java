@@ -1,10 +1,10 @@
-package com.genuine.oauth;
+package com.nkd.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LearnSpringOAuthApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
