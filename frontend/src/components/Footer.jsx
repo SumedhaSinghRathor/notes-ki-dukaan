@@ -1,5 +1,3 @@
-import React from "react";
-
 function Footer() {
   return (
     <div className="relative flex w-screen bottom-0 bg-black items-center justify-between py-1.5 px-6.5">

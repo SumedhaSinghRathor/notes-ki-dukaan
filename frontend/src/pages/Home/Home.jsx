@@ -1,4 +1,3 @@
-import React from "react";
 import Thumbnail from "./Thumbnail";
 import ThumbnailList from "./ThumbnailList";
 
@@ -10,7 +9,7 @@ function Home() {
         {list ? (
           <div>
             {Array.from({ length: 9 }).map((_, index) => (
-              <ThumbnailList key={index} />
+              <ThumbnailList />
             ))}
           </div>
         ) : (

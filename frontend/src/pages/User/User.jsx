@@ -1,4 +1,3 @@
-import React from "react";
 import Thumbnail from "../Home/Thumbnail";
 import ThumbnailList from "../Home/ThumbnailList";
 

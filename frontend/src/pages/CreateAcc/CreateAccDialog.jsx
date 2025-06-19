@@ -1,5 +1,3 @@
-import React from "react";
-
 function CreateAcc() {
   return (
     <div className="w-full h-full bg-amber-300 flex justify-center">

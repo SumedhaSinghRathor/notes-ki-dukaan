@@ -1,5 +1,3 @@
-import React from "react";
-
 const Star = ({ index, rating, onRatingChange }) => {
   const handleLeftHalfClick = () => onRatingChange(index, true);
   const handleRightHalfClick = () => onRatingChange(index, false);
