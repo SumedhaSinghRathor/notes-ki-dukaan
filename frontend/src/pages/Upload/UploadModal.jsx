@@ -102,7 +102,7 @@ function UploadModal({ onClose }) {
               <div className="semester">
                 <label htmlFor="">
                   Semester: <br />
-                  <select className="bg-white border border-black rounded-lg w-44 px-2 py-1.5 focus:outline-none  ">
+                  <select className="bg-white border border-black rounded-lg w-44 px-2 py-1.5 focus:outline-none">
                     <option>1st</option>
                     <option>2nd</option>
                     <option>3rd</option>
@@ -131,7 +131,7 @@ function UploadModal({ onClose }) {
                   <input
                     type="text"
                     id="tag-input"
-                    placeholder="Type any tag"
+                    placeholder="Press the enter key to add a tag"
                     value={tag}
                     maxLength={50}
                     onChange={(e) => setTag(e.target.value)}

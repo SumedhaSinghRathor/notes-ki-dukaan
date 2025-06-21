@@ -14,7 +14,7 @@ function ThumbnailList() {
         <h2 className="text-xs">Taught by Anil Kumar Swain</h2>
       </div>
       <div className="tags flex justify-end gap-2 whitespace-nowrap overflow-clip grow">
-        <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border-1 border-black text-xs">
+        <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border border-black text-xs">
           COA
         </div>
       </div>

@@ -29,7 +29,7 @@ function Feature() {
       <img
         src={feature.img}
         alt=""
-        className="img1 size-64 shadow-[0.75em_0.75em_black] border-1 border-black max-md:scale-75 max-sm:scale-60"
+        className="img1 size-64 shadow-[0.75em_0.75em_black] border border-black max-md:scale-75 max-sm:scale-60"
       />
       <p
         className={`max-w-lg text-4xl font-semibold ${

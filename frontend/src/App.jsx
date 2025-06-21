@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import UploadButton from "./components/UploadButton";
@@ -9,24 +9,22 @@ import View from "./pages/View/View";
 import Landing from "./pages/Landing/Landing";
 
 function App() {
-  const isLoggedIn = true;
-
   return (
     <div className="w-screen min-h-screen max-h-fit">
-      {isLoggedIn ? (
+      {loggedIn ? (
         <>
           <Navbar />
           <Routes>
-            <Route path="/home" element={<Home />}></Route>
-            <Route path="/user" element={<User />}></Route>
-            <Route path="/view" element={<View />}></Route>
+            <Route path="/home" element={<Home />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/view" element={<View />} />
           </Routes>
           <Footer />
           <UploadButton />
         </>
       ) : (
         <>
-          <Landing />
+          <Landing loggedIn={loggedIn} />
         </>
       )}
     </div>
@@ -34,30 +32,3 @@ function App() {
 }
 
 export default App;
-
-// import { useEffect, useState } from "react";
-
-// const App = () => {
-//   const [user, setUser] = useState(null);
-
-//   useEffect(() => {
-//     fetch("http://localhost:8080/user", { credentials: "include" })
-//       .then((res) => res.json())
-//       .then((data) => setUser(data.name ? data : null))
-//       .catch(console.error);
-//   }, []);
-
-//   return (
-//     <div>
-//       {user ? (
-//         <h1>Welcome, {user.name}!</h1>
-//       ) : (
-//         <a href="http://localhost:8080/oauth2/authorization/google">
-//           <button>Login with Google</button>
-//         </a>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default App;

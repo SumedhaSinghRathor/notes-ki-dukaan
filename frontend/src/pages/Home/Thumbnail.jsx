@@ -7,7 +7,7 @@ function Thumbnail() {
   return (
     <div className="group w-3xs flex flex-col gap-1.5 mx-auto">
       <Link to="/view">
-        <div className="thumbnailimg w-full h-44 bg-light-orange border-1 border-black" />
+        <div className="thumbnailimg w-full h-44 bg-light-orange border border-black" />
       </Link>
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
@@ -25,7 +25,7 @@ function Thumbnail() {
         <div className="faculty w-fit hover:underline">Anil Kumar Swain</div>
         <div className="tags_rating flex justify-between items-center w-full">
           <div className="tags flex justify-between gap-2 whitespace-nowrap overflow-clip">
-            <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border-1 border-black text-xs">
+            <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border border-black text-xs">
               COA
             </div>
           </div>
