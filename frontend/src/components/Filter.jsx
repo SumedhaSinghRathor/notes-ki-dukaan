@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Search from "./Search";
 
 function Filter() {
   const [toggle, setToggle] = useState(false);
@@ -101,6 +102,22 @@ function Filter() {
                   </div>
                 ))}
               </div>
+            </div>
+            <hr />
+            <div className="tags flex items-center gap-10 my-2">
+              <h3 className="text-lg font-semibold">Teacher</h3>
+              <Search />
+            </div>
+            <hr />
+            <div className="tags flex items-center gap-10 my-2">
+              <h3 className="text-lg font-semibold">Format</h3>
+              <label className="flex items-center gap-2 accent-dark-orange">
+                <input type="radio" name="format" value="Handwritten" />
+                Handwritten
+              </label>
+              <label className="flex items-center gap-2 accent-dark-orange">
+                <input type="radio" name="format" value="Handwritten" /> Digital
+              </label>
             </div>
             <hr />
           </div>
