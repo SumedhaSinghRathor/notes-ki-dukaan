@@ -1,3 +1,4 @@
+import Filter from "../../components/Filter";
 import Thumbnail from "./Thumbnail";
 import ThumbnailList from "./ThumbnailList";
 
@@ -5,7 +6,8 @@ function Home() {
   const list = false;
   return (
     <div>
-      <div className="w-full h-fit p-10">
+      <Filter />
+      <div className="w-full h-fit px-6">
         {list ? (
           <div>
             {Array.from({ length: 9 }).map((_, index) => (
