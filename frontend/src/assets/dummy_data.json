@@ -1,0 +1,361 @@
+{
+  "teachers": [
+    "Abinas Panda",
+    "Abir Sen",
+    "Ajit Kumar Pasayat",
+    "Debanjan Pathak",
+    "Jasaswi Prasad Mohanty",
+    "Jayanti Dansana",
+    "Jaydeep Das",
+    "Jayeeta Chakraborty",
+    "Kumar Surjeet Chaudhury",
+    "Mainak Bandyopadhyay",
+    "Mainak Biswas",
+    "Minakhi Rout",
+    "Monideepa Roy",
+    "Murari Mandal",
+    "Nibedan Panda",
+    "Nikhilanand Arya",
+    "Partha Pratim Sarangi",
+    "Pratyusa Mukherjee",
+    "Priyanka Panigrahi",
+    "Rajdeep Chatterjee",
+    "Roshni Pradhan",
+    "Sambit Praharaj",
+    "Santos Kumar Baliarsingh",
+    "Sarita Tripathy",
+    "Satarupa Mohanty",
+    "Satyananda Champati Rai",
+    "Soumya Ranjan Mishra",
+    "Sourajit Behera",
+    "Sricheta Parui",
+    "Subhadip Pramanik",
+    "Sujoy Datta",
+    "Supriyo Mandal",
+    "Tanik Saikh",
+    "Abhijit Deuri",
+    "Abhishek Raj",
+    "Ajay Anand",
+    "Amiya Kumar Dash",
+    "Ankit Raj",
+    "Jhalak Hota",
+    "Lalit Kumar Vashishtha",
+    "N. Biraja Isac",
+    "Nayan Kumar Subhashis Behera",
+    "P. Parhi",
+    "Prabhu Prasad Dev",
+    "Prasenjit Maiti",
+    "R. N. Ramakant Parida",
+    "Rakesh Kumar Rai",
+    "Sankalp Nayak",
+    "Sohail Khan",
+    "Sovan Kumar Sahoo",
+    "Sunil Kumar Sawant",
+    "Vijay Kumar Meena",
+    "Vishal Meena",
+    "Lipika Dewangan",
+    "Lipika Mohanty",
+    "Aradhana Behura",
+    "Priyanka Roy",
+    "Shilpa Das",
+    "Shubhangi Shreya",
+    "Ganga Bishnu Mund",
+    "Madhabananda Das",
+    "Sanhita Mishra",
+    "Subodh Kumar Mohanty"
+  ],
+
+  "years": [
+    {
+      "1st": [
+        {
+          "Physics": [
+            "Oscillation",
+            "Waves and Interference",
+            "Interference in thin films",
+            "Diffraction",
+            "Quantum Mechanics",
+            "Electromagnetic Theory",
+            "Laser and Fiber Optics",
+            "Optical Fiber"
+          ]
+        },
+        {
+          "DE & LA": [
+            "Ordinary Differential Equations of First Order",
+            "Linear Differential Equations of second order",
+            "Special Functions",
+            "System of Linear Equations and Vector Space",
+            "Matrix-Eigen value problems"
+          ]
+        },
+        {
+          "SLS": [
+            "Cellular Organization of a Living Organism",
+            "Molecular and Biochemical Basis of an Organism",
+            "Enzymes, Photosynthesis, Metabolism and Bioenergetics",
+            "Nervous system, Immune system and Cell Signaling",
+            "Molecular Machines, Biosensor and Bioremediation"
+          ]
+        },
+        {
+          "EVS": [
+            "Overview of the Environment",
+            "Air Pollution and Control",
+            "Water Pollution and Control",
+            "Soil Pollution and Solid Waste Management",
+            "Green Chemistry and EIA"
+          ]
+        },
+        {
+          "Chemistry": [
+            "Chemical Equilibrium and Thermodynamics",
+            "Chemical Kinetics",
+            "Spectroscopy",
+            "NMR Spectroscopy",
+            "Electrochemical Energy Systems",
+            "Smart and Intelligent Materials"
+          ]
+        },
+        {
+          "Programming Lab": [
+            "Introduction to Computer and Programming",
+            "Arrays and Strings",
+            "Functions",
+            "Pointers",
+            "Structures, Unions",
+            "File Handling"
+          ]
+        },
+        {
+          "B.Etc": [
+            "Semiconductors, Diodes and Transistors",
+            "Operational Amplifier (Op-amp) and applications",
+            "Introduction to Digital Electronics",
+            "Miscellaneous Electronic Devices"
+          ]
+        },
+        {
+          "English": [
+            "Professional Communication",
+            "Basics of Grammar and Writing Skills",
+            "Basic Sounds of English",
+            "English Literature"
+          ]
+        },
+        {
+          "Comm Lab": [
+            "Reading Comprehension",
+            "Time & Tense + Subject-Verb Agreement",
+            "Vocabulary Building (Mind Mapping/Phrasal Verbs)",
+            "Listening Comprehension",
+            "E-mail Writing",
+            "Resume Writing/ Video Resume",
+            "Thematic Speaking",
+            "PowerPoint Presentation"
+          ]
+        }
+      ]
+    },
+    {
+      "2nd": [
+        {
+          "P&S": [
+            "Probability and random variables",
+            "Joint probability and distributions",
+            "Descriptive Statistics",
+            "Inferential statistics"
+          ]
+        },
+        {
+          "IND 4.0": [
+            "Industry 4.0 and its components",
+            "Digital Manufacturing and Design",
+            "Industrial IoT",
+            "Challenges & Opportunities in Industry 4.0"
+          ]
+        },
+        {
+          "DS": [
+            "Linked List",
+            "Stacks",
+            "Queues",
+            "Trees",
+            "Graphs",
+            "Sorting and Searching"
+          ]
+        },
+        {
+          "DSD": [
+            "Basic VLSI System Design",
+            "Binary Codes and Binary Algebra",
+            "Combinational Circuits",
+            "Sequential Circuits",
+            "Advanced Concepts"
+          ]
+        },
+        {
+          "AFL": [
+            "Finite Automata",
+            "Regular Expression (RE)",
+            "Context Free Grammar (CFG)",
+            "Context Free Languages (CFL)",
+            "Push Down Automata (PDA)",
+            "Turing Machines (TM) and Undecidability"
+          ]
+        },
+        {
+          "DSS": [
+            "Logic",
+            "Set, Relation & Function",
+            "Recurrence Relation and their solutions",
+            "Groups and Rings",
+            "Graph Theory"
+          ]
+        },
+        {
+          "OS": [
+            "Process Management",
+            "Memory Management",
+            "File Management",
+            "Distributed Systems"
+          ]
+        },
+        {
+          "OOPS": [
+            "Introduction to Object Oriented Programming",
+            "Class and Object",
+            "Inheritance",
+            "Polymorphism",
+            "Exception Handling, Templates, Files and Streams",
+            "Multithreading",
+            "GUI Programming",
+            "JDBC"
+          ]
+        },
+        {
+          "DBMS": [
+            "Relational Model",
+            "Database Design",
+            "Transaction Management",
+            "Implementation Techniques"
+          ]
+        },
+        {
+          "COA": [
+            "Basic Structure of Computers",
+            "Basic Processing Unit",
+            "Memory System",
+            "Arithmetic",
+            "I/O Organization"
+          ]
+        }
+      ]
+    },
+    {
+      "3rd": [
+        {
+          "DAA": [
+            "Divide & Conquer and Greedy Approaches",
+            "Dynamic Programming Approaches",
+            "Amortization",
+            "NP Problems"
+          ]
+        },
+        {
+          "SE": [
+            "Requirement Engineering Process",
+            "Quality concepts",
+            "Review techniques",
+            "Software Quality Assurance (SQA)"
+          ]
+        },
+        {
+          "EE": [
+            "Production and Cost Analysis",
+            "Time Value of Money",
+            "Economic Appraisal Techniques",
+            "Macroeconomic policies"
+          ]
+        },
+        {
+          "CN": [
+            "Data Communication",
+            "Physical Layer",
+            "Network Layer",
+            "Transport Layer",
+            "Application Layer"
+          ]
+        },
+        {
+          "ML": [
+            "Types of Machine Learning",
+            "Clustering",
+            "Neural Networks",
+            "Applications and other tools"
+          ]
+        },
+        {
+          "AI": [
+            "Problem Solving Methods",
+            "Knowledge Representation",
+            "Planning",
+            "Uncertain Knowledge and Reasoning"
+          ]
+        },
+        {
+          "UHV": [
+            "Need",
+            "Basic Guidelines",
+            "Content and Process for Value Education",
+            "Understanding Harmony in the Human Being",
+            "Understanding Harmony in the Family and Society",
+            "Understanding Harmony in the Nature and Existence",
+            "Implications of the above Holistic Understanding of Harmony on Professional Ethics"
+          ]
+        }
+      ]
+    },
+    {
+      "4th": [
+        {
+          "DL": [
+            "Deep Networks",
+            "Convolutional Networks",
+            "Linear factor Models",
+            "Representation Learning",
+            "Deep Learning with Python"
+          ]
+        },
+        {
+          "HCI": [
+            "Foundations of HCI",
+            "HCI in the Software Process",
+            "Evaluation Techniques",
+            "Collaboration and Communication",
+            "Programming Interactive Systems"
+          ]
+        },
+        {
+          "TSF": [
+            "Introduction to time series forecasting",
+            "Spectral Analysis",
+            "Non-stationary and Seasonal Time Series Models",
+            "Multivariate Time Series",
+            "State-Space Models",
+            "Forecasting Techniques "
+          ]
+        },
+        {
+          "NCS": [
+            "Introduction to NIC Computers",
+            "Nature Inspired Computing for Problem-Solving",
+            "Nature Inspired Computing for Modeling",
+            "Immunocomputing",
+            "Computing With New Natural Materials"
+          ]
+        }
+      ]
+    }
+  ]
+}

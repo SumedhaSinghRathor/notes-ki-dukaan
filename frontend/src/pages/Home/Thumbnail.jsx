@@ -3,6 +3,17 @@ import { Link } from "react-router-dom";
 
 function Thumbnail() {
   const [bookmark, setBookmark] = useState(false);
+  const title = document.getElementById("title");
+
+  function bookmarked() {
+    setBookmark(!bookmark);
+
+    alert(
+      bookmark
+        ? `${title.textContent} has been removed from your bookmarks`
+        : `${title.textContent} has been added to your bookmarks`
+    );
+  }
 
   return (
     <div className="group w-3xs flex flex-col gap-1.5 mx-auto">
@@ -11,14 +22,17 @@ function Thumbnail() {
       </Link>
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
-          <div className="title font-bold text-2xl group-hover:underline">
+          <div
+            id="title"
+            className="title font-bold text-2xl group-hover:underline"
+          >
             Basic Memory Unit
           </div>
           <i
             className={`bx text-2xl flex justify-center items-center text-dark-orange ${
               bookmark ? "bxs-bookmark" : "bx-bookmark"
             }`}
-            onClick={() => setBookmark(!bookmark)}
+            onClick={bookmarked}
           />
         </div>
 

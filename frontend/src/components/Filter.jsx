@@ -1,58 +1,30 @@
 import { useState } from "react";
-import Search from "./Search";
+import dummy_data from "../assets/dummy_data.json";
+import Search from "../components/Search";
 
 function Filter() {
   const [toggle, setToggle] = useState(false);
-  const [year, setYear] = useState("1st");
-  const firstYearSubjects = [
-    "Physics",
-    "DE & LA",
-    "SLS",
-    "EVS",
-    "Chemistry",
-    "B.Etc",
-    "English",
-    "Comm Lab",
-  ];
-  const secondYearSubjects = [
-    "P&S",
-    "IND 4.0",
-    "DS",
-    "DSD",
-    "AFL",
-    "DSS",
-    "OS",
-    "OOPS",
-    "DBMS",
-    "COA",
-  ];
-  const thirdYearSubjects = ["EE", "DAA", "SE", "CN", "ML", "AI", "UHV"];
-  const fourthYearSubjects = [
-    "I",
-    "don't",
-    "know",
-    "the",
-    "subjects",
-    "of",
-    "this",
-    "year",
-  ];
-  const getSubjectsForYear = () => {
-    switch (year) {
-      case "1st":
-        return firstYearSubjects;
-      case "2nd":
-        return secondYearSubjects;
-      case "3rd":
-        return thirdYearSubjects;
-      case "4th":
-        return fourthYearSubjects;
-      default:
-        return [];
-    }
+  const yearKeys = dummy_data.years.map((yearObj) => Object.keys(yearObj)[0]);
+  const [selectedYear, setSelectedYear] = useState(yearKeys[0]);
+  const selectedYearObj = dummy_data.years.find(
+    (yearObj) => Object.keys(yearObj)[0] === selectedYear
+  );
+  const subjectsArr = selectedYearObj ? selectedYearObj[selectedYear] : [];
+  const subjectKeys = subjectsArr.map(
+    (subjectObj) => Object.keys(subjectObj)[0]
+  );
+  const [selectedTag, setSelectedTag] = useState(null);
+  const topicsArr = selectedTag
+    ? subjectsArr.find(
+        (subjectObj) => Object.keys(subjectObj)[0] === selectedTag
+      )?.[selectedTag] || []
+    : [];
+  const [selectedTopics, setSelectedTopics] = useState([]);
+  const handleTopicClick = (topic) => {
+    setSelectedTopics((prev) =>
+      prev.includes(topic) ? prev.filter((t) => t !== topic) : [...prev, topic]
+    );
   };
-
-  const [tag, setTag] = useState(null);
 
   return (
     <section className="p-4 flex flex-col gap-2">
@@ -68,48 +40,76 @@ function Filter() {
             }`}
           />
         </div>
-        <div className={`${toggle ? "" : "hidden"}`}>
-          <div className="p-2">
-            <div className="flex items-center gap-10 my-2">
-              <h3 className="text-lg font-semibold">Years</h3>
-              <div className="">
-                <select
-                  className="bg-white py-1 px-2 focus:outline-none rounded border border-black w-30"
-                  value={year}
-                  onChange={(e) => setYear(e.target.value)}
-                >
-                  <option value="1st">1st</option>
-                  <option value="2nd">2nd</option>
-                  <option value="3rd">3rd</option>
-                  <option value="4th">4th</option>
-                </select>
-              </div>
+        <div className={`p-2 ${toggle ? "" : "hidden"}`}>
+          <div className="flex items-center gap-10 my-2">
+            <h3 className="text-lg font-semibold">Years</h3>
+            <div>
+              <select
+                className="bg-white py-1 px-2 focus:outline-none rounded border border-black w-30"
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(e.target.value)}
+              >
+                {yearKeys.map((key) => (
+                  <option key={key} value={key}>
+                    {key}
+                  </option>
+                ))}
+              </select>
             </div>
-            <hr />
-            <div className="tags flex items-center gap-10 my-2">
+          </div>
+          <hr />
+          <div className="my-2 flex flex-col gap-2">
+            <div className="tags flex items-center gap-10">
               <h3 className="text-lg font-semibold">Subjects</h3>
               <div className="flex gap-2 flex-wrap">
-                {getSubjectsForYear().map((subject) => (
+                {subjectKeys.map((subject) => (
                   <div
                     key={subject}
                     className={`flex items-center gap-1 py-1 px-2 text-sm rounded-full border border-black cursor-pointer ${
-                      tag === subject ? "bg-black text-dark-orange" : "bg-white"
+                      selectedTag === subject
+                        ? "bg-black text-dark-orange"
+                        : "bg-white"
                     }`}
-                    onClick={() => setTag(tag === subject ? null : subject)}
+                    onClick={() =>
+                      setSelectedTag(selectedTag === subject ? null : subject)
+                    }
                   >
-                    {tag === subject && <i className="bx bx-check text-xl" />}
+                    {selectedTag === subject && (
+                      <i className="bx bx-check text-xl" />
+                    )}
                     {subject}
                   </div>
                 ))}
               </div>
             </div>
-            <hr />
-            <div className="tags flex items-center gap-10 my-2">
-              <h3 className="text-lg font-semibold">Teacher</h3>
-              <Search />
+            <div
+              className={`w-4xl text-xs flex flex-wrap gap-2 ${
+                selectedTag ? "" : "hidden"
+              }`}
+            >
+              {topicsArr.map((topic, idx) => (
+                <div
+                  key={idx}
+                  className={`py-1 px-2 border border-black rounded-xl w-fit cursor-pointer ${
+                    selectedTopics.includes(topic)
+                      ? "bg-black text-dark-orange"
+                      : "bg-white"
+                  }`}
+                  onClick={() => handleTopicClick(topic)}
+                >
+                  {topic}
+                </div>
+              ))}
             </div>
-            <hr />
-            <div className="tags flex items-center gap-10 my-2">
+          </div>
+          <hr />
+          <div className="tags flex items-center gap-10 my-2">
+            <h3 className="text-lg font-semibold">Teacher</h3>
+            <Search />
+          </div>
+          <hr />
+          <div className="flex justify-between my-2">
+            <div className="tags flex items-center gap-10">
               <h3 className="text-lg font-semibold">Format</h3>
               <label className="flex items-center gap-2 accent-dark-orange">
                 <input type="radio" name="format" value="Handwritten" />
@@ -119,21 +119,20 @@ function Filter() {
                 <input type="radio" name="format" value="Digital" /> Digital
               </label>
             </div>
-            <hr />
-            <div className="tags flex items-center gap-10 my-2">
+            <div className="tags flex items-center gap-10">
               <h3 className="text-lg font-semibold">Sort</h3>
               <label className="flex items-center gap-2 accent-dark-orange">
-                <input type="radio" name="format" value="Handwritten" />
-                Name
+                <input type="radio" name="sort" value="UploadDate" /> Upload
+                Date
               </label>
               <label className="flex items-center gap-2 accent-dark-orange">
-                <input type="radio" name="format" value="Digital" /> Upload Date
+                <input type="radio" name="sort" value="Rating" /> Rating
               </label>
             </div>
-            <hr />
           </div>
+          <hr />
           <button
-            className="border border-black py-1 px-2 rounded-lg bg-dark-orange font-bold m-2 active:bg-black active:text-dark-orange"
+            className="border border-black py-1 px-2 rounded-lg bg-dark-orange font-bold mt-2 active:bg-black active:text-dark-orange"
             onClick={() => setToggle(false)}
           >
             Filter

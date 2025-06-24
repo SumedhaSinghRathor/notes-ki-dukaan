@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import teachers from "../assets/teachers";
+import dummy_data from "../assets/dummy_data.json";
 
 function Search({ onSelect }) {
   const [query, setQuery] = useState("");
@@ -17,7 +17,7 @@ function Search({ onSelect }) {
       }
 
       try {
-        const filtered = teachers
+        const filtered = dummy_data.teachers
           .filter((name) => name.toLowerCase().includes(trimmed))
           .slice(0, 5); // limit results to top 5
 
