@@ -16,15 +16,13 @@ function Home() {
 export function HomeContent() {
   const { search } = useContext(SearchContext);
 
-  const filteredDocs = dummy_data.documents.filter(
-    (doc) =>
-      doc.name.toLowerCase().includes(search.toLowerCase()) ||
-      doc.faculty.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredDocs = dummy_data.documents.filter((doc) => {
+    return doc.name.toLowerCase().includes(search.toLowerCase());
+  });
 
   return (
     <>
-      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row auto-rows-min gap-8">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row auto-rows-min gap-8 grow">
         {filteredDocs.map((document) => (
           <Thumbnail key={document.id} data={document} />
         ))}
