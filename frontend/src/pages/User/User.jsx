@@ -1,8 +1,9 @@
 import Thumbnail from "../Home/Thumbnail";
-import ThumbnailList from "../Home/ThumbnailList";
+import dummy_data from "../../assets/dummy_data.json";
+import { useState } from "react";
 
 function User() {
-  const list = true;
+  const [uploads, setUploads] = useState(true);
 
   return (
     <>
@@ -22,11 +23,7 @@ function User() {
       </div>
       <div className="content w-full justify-between p-8 flex gap-8 max-sm:flex-col">
         <div className="box bg-orange-white w-72 h-fit border border-black p-4 rounded-xl flex flex-col gap-4 shrink-0 mx-auto">
-          <div className="">
-            Semester / Date Joined <br />
-            Rank : <b>1</b> <br />
-            Total Uploads: <b>75</b>
-          </div>
+          <p className="text-center font-bold">Streak 🔥 : 0</p>
           <div className="heatmap bg-black p-2 rounded-lg grid grid-cols-7 gap-2">
             {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((day, index) => (
               <div
@@ -46,34 +43,29 @@ function User() {
         </div>
         <div className="bg-orange-white rounded-xl border border-black flex-1 overflow-clip">
           <div className="flex font-bold text-xl bg-light-orange border-b-1 border-black">
-            <div className="w-1/2 text-center py-0.5">My Uploads</div>
-            <div className="w-1/2 text-center rounded-t-lg py-0.5 bg-black text-white">
+            <div
+              className={`w-1/2 text-center py-0.5 ${
+                uploads ? "rounded-t-lg bg-black text-white" : ""
+              }`}
+              onClick={() => setUploads(true)}
+            >
+              My Uploads
+            </div>
+            <div
+              className={`w-1/2 text-center rounded-t-lg ${
+                uploads ? "" : "py-0.5 bg-black text-white"
+              }`}
+              onClick={() => setUploads(false)}
+            >
               Bookmarks
             </div>
           </div>
           <div className="p-4">
-            <div className="flex items-center w-fit rounded hidden">
-              <div className="flex bg-black rounded">
-                <i className="bx bxs-grid-alt text-3xl p-1 text-white"></i>
-              </div>
-              <div className="flex active:bg-black active:rounded">
-                <i className="bx bx-list-ul text-3xl p-1 active:text-white"></i>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-7 gap-9">
+              {dummy_data.documents.map((document) => (
+                <Thumbnail data={document} />
+              ))}
             </div>
-
-            {list ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-7 gap-9">
-                {Array.from({ length: 9 }).map((_, index) => (
-                  <Thumbnail key={index} />
-                ))}
-              </div>
-            ) : (
-              <div>
-                {Array.from({ length: 9 }).map((_, index) => (
-                  <ThumbnailList key={index} />
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>
