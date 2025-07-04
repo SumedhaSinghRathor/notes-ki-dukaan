@@ -3,6 +3,8 @@
     "Abinas Panda",
     "Abir Sen",
     "Ajit Kumar Pasayat",
+    "Anil Kumar Swain",
+    "Anisha Kumari",
     "Debanjan Pathak",
     "Jasaswi Prasad Mohanty",
     "Jayanti Dansana",
@@ -484,6 +486,34 @@
       "ratingAverage": 3.5,
       "views": 0,
       "bookmarked": false,
+      "uploadedDate": ""
+    },
+    {
+      "id": 10,
+      "name": "Cloud Fundamental",
+      "subject": "CC",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Anisha Kumari",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 2.4,
+      "views": 0,
+      "bookmarked": true,
+      "uploadedDate": ""
+    },
+    {
+      "id": 11,
+      "name": "VM Provisioning",
+      "subject": "CC",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Anisha Kumari",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 2.4,
+      "views": 0,
+      "bookmarked": true,
       "uploadedDate": ""
     }
   ]

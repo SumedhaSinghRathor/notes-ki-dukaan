@@ -16,7 +16,14 @@ function Thumbnail({ data }) {
 
   return (
     <div className="group w-3xs flex flex-col gap-1.5 mx-auto">
-      <Link to="/view">
+      <Link
+        to={`/view/${data.id}`}
+        state={{
+          name: data.name,
+          faculty: data.faculty,
+          rating: data.ratingAverage,
+        }}
+      >
         <div className="thumbnailimg w-full h-44 bg-light-orange border border-black" />
       </Link>
       <div className="info flex flex-col gap-1">
