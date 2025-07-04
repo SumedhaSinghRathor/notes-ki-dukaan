@@ -74,9 +74,6 @@ function Filter() {
                       setSelectedTag(selectedTag === subject ? null : subject)
                     }
                   >
-                    {selectedTag === subject && (
-                      <i className="bx bx-check text-xl" />
-                    )}
                     {subject}
                   </div>
                 ))}
@@ -90,13 +87,16 @@ function Filter() {
               {topicsArr.map((topic, idx) => (
                 <div
                   key={idx}
-                  className={`py-1 px-2 border border-black rounded-xl w-fit cursor-pointer ${
+                  className={`py-1 px-2 border border-black rounded-xl flex items-center gap-1 w-fit cursor-pointer ${
                     selectedTopics.includes(topic)
                       ? "bg-black text-dark-orange"
                       : "bg-white"
                   }`}
                   onClick={() => handleTopicClick(topic)}
                 >
+                  {selectedTopics.includes(topic) && (
+                    <i className="bx bx-check text-lg" />
+                  )}
                   {topic}
                 </div>
               ))}
