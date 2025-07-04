@@ -357,5 +357,134 @@
         }
       ]
     }
+  ],
+
+  "documents": [
+    {
+      "id": 1,
+      "name": "Basic Memory Unit",
+      "subject": "COA",
+      "topics": [],
+      "semester": "3rd",
+      "format": "Digital",
+      "faculty": "Anil Kumar Swain",
+      "uploadedBy": "22051822@kiit.ac.in",
+      "ratingAverage": 4.27,
+      "views": 0,
+      "bookmarked": true,
+      "uploadedDate": ""
+    },
+    {
+      "id": 2,
+      "name": "Introduction to AI",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": false,
+      "uploadedDate": ""
+    },
+    {
+      "id": 3,
+      "name": "Solving Problems of Searching",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": false,
+      "uploadedDate": ""
+    },
+    {
+      "id": 4,
+      "name": "Informed Search",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": true,
+      "uploadedDate": ""
+    },
+    {
+      "id": 5,
+      "name": "Local Search",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": false,
+      "uploadedDate": ""
+    },
+    {
+      "id": 6,
+      "name": "Constraint Satisfaction Problems",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": false,
+      "uploadedDate": ""
+    },
+    {
+      "id": 7,
+      "name": "Logic",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": true,
+      "uploadedDate": ""
+    },
+    {
+      "id": 8,
+      "name": "Planning",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": false,
+      "uploadedDate": ""
+    },
+    {
+      "id": 9,
+      "name": "Probabilistic Reasoning",
+      "subject": "AI",
+      "topics": [],
+      "semester": "6th",
+      "format": "Digital",
+      "faculty": "Vijay Kumar Meena",
+      "uploadedBy": "22052863@kiit.ac.in",
+      "ratingAverage": 3.5,
+      "views": 0,
+      "bookmarked": false,
+      "uploadedDate": ""
+    }
   ]
 }

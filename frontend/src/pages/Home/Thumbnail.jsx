@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Thumbnail() {
-  const [bookmark, setBookmark] = useState(false);
-  const title = document.getElementById("title");
+function Thumbnail({ data }) {
+  const [bookmark, setBookmark] = useState(data.bookmarked || false);
 
   function bookmarked() {
     setBookmark(!bookmark);
 
     alert(
       bookmark
-        ? `${title.textContent} has been removed from your bookmarks`
-        : `${title.textContent} has been added to your bookmarks`
+        ? `${data.name} has been removed from your bookmarks`
+        : `${data.name} has been added to your bookmarks`
     );
   }
 
@@ -22,11 +21,8 @@ function Thumbnail() {
       </Link>
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
-          <div
-            id="title"
-            className="title font-bold text-2xl group-hover:underline"
-          >
-            Basic Memory Unit
+          <div className="title font-bold text-xl line-clamp-1 group-hover:underline">
+            {data.name || "Basic Memory Unit"}
           </div>
           <i
             className={`bx text-2xl flex justify-center items-center text-dark-orange ${
@@ -36,15 +32,17 @@ function Thumbnail() {
           />
         </div>
 
-        <div className="faculty w-fit hover:underline">Anil Kumar Swain</div>
+        <div className="faculty w-fit hover:underline">
+          {data.faculty || "Anil Kumar Swain"}
+        </div>
         <div className="tags_rating flex justify-between items-center w-full">
           <div className="tags flex justify-between gap-2 whitespace-nowrap overflow-clip">
             <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border border-black text-xs">
-              COA
+              {data.subject || "COA"}
             </div>
           </div>
-          <div className="rating flex justify-between gap-2 items-center">
-            <div className="num">4.27</div>
+          <div className="rating flex justify-between gap-1 items-center">
+            <div className="num">{data.ratingAverage || 4.27}</div>
             <i className="bx bxs-star text-2xl text-dark-orange" />
           </div>
         </div>
