@@ -7,30 +7,31 @@ import User from "./pages/User/User";
 import View from "./pages/View/View";
 import Landing from "./pages/Landing/Landing";
 import SearchProvider from "./context/SearchContext";
+import { FilterProvider } from "./context/FilterContext";
 
 function App() {
   let loggedIn = true;
   return (
-    <SearchProvider>
-      <div className="w-screen min-h-screen max-h-fit flex flex-col">
-        {loggedIn ? (
-          <>
-            <Navbar />
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/user" element={<User />} />
-              <Route path="/view/:id" element={<View />} />
-            </Routes>
-            <Footer />
-            <UploadButton />
-          </>
-        ) : (
-          <>
+    <FilterProvider>
+      <SearchProvider>
+        <div className="w-screen min-h-screen max-h-fit flex flex-col">
+          {loggedIn ? (
+            <>
+              <Navbar />
+              <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/user" element={<User />} />
+                <Route path="/view/:id" element={<View />} />
+              </Routes>
+              <Footer />
+              <UploadButton />
+            </>
+          ) : (
             <Landing loggedIn={loggedIn} />
-          </>
-        )}
-      </div>
-    </SearchProvider>
+          )}
+        </div>
+      </SearchProvider>
+    </FilterProvider>
   );
 }
 

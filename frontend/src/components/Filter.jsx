@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useCallback, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import dummy_data from "../assets/dummy_data.json";
 import Search from "../components/Search";
+import { FilterContext } from "../context/FilterContext";
 
 function Filter() {
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+
+  const { setFilters } = useContext(FilterContext);
+
+  const teacher = useCallback((name) => {
+    console.log("Selected teacher: ", name);
+  }, []);
+
   const yearKeys = dummy_data.years.map((yearObj) => Object.keys(yearObj)[0]);
   const [selectedYear, setSelectedYear] = useState(yearKeys[0]);
   const selectedYearObj = dummy_data.years.find(
@@ -26,8 +36,27 @@ function Filter() {
     );
   };
 
+  function Submit(e) {
+    e.preventDefault();
+    setFilters({
+      year: selectedYear,
+      subject: selectedTag,
+      topics: selectedTopics,
+      teacher: null,
+      format:
+        document.querySelector("input[name='format']:checked")?.value || null,
+      sort: document.querySelector("input[name='sort']:checked")?.value || null,
+    });
+    const params = new URLSearchParams();
+    if (selectedYear) params.set("year", selectedYear);
+    if (selectedTag) params.set("subject", selectedTag);
+    if (selectedTopics.length > 0) params.set("topics", selectedTopics);
+    navigate(`/home?${params.toString()}`);
+    setToggle(false);
+  }
+
   return (
-    <section className="p-4 flex flex-col gap-2">
+    <form className="p-4 flex flex-col gap-2">
       <div className="p-2 bg-light-orange/40 rounded">
         <div
           className="flex items-center justify-between cursor-pointer font-bold"
@@ -105,7 +134,7 @@ function Filter() {
           <hr />
           <div className="tags flex items-center gap-10 my-2">
             <h3 className="text-lg font-semibold">Teacher</h3>
-            <Search />
+            <Search onSelect={teacher} />
           </div>
           <hr />
           <div className="flex justify-between my-2">
@@ -133,13 +162,13 @@ function Filter() {
           <hr />
           <button
             className="border border-black py-1 px-2 rounded-lg bg-dark-orange font-bold mt-2 active:bg-black active:text-dark-orange"
-            onClick={() => setToggle(false)}
+            onClick={Submit}
           >
             Filter
           </button>
         </div>
       </div>
-    </section>
+    </form>
   );
 }
 
