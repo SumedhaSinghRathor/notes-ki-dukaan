@@ -1,10 +1,25 @@
-import { useContext } from "react";
-import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { useEffect, useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import logo from "../assets/logo.svg";
 import { SearchContext } from "../context/SearchContext";
 
 function Navbar() {
   const { search, setSearch } = useContext(SearchContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const value = params.get("query");
+    if (value) setSearch(value);
+  }, [setSearch]);
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+    const params = new URLSearchParams();
+    if (value) params.set("query", value);
+    navigate(`/home?${params.toString()}`);
+  };
 
   return (
     <ul className="navbar bg-black text-white flex justify-between items-center px-7.5 py-2 gap-8">
@@ -23,7 +38,7 @@ function Navbar() {
           type="search"
           placeholder="Search"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={handleSearchChange}
           className="font-bold focus:outline-none text-black rounded-2xl bg-dark-orange px-6 py-0.5 w-full"
         />
       </li>

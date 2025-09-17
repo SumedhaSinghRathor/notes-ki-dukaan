@@ -13,10 +13,7 @@ function User() {
             <i className="bx bxs-user text-black text-9xl" />
           </div>
           <div className="name">
-            <div className="flex items-baseline gap-1">
-              <h1 className="text-4xl font-bold leading-10">UserName</h1>
-              <i className="bx bxs-edit text-2xl cursor-pointer"></i>
-            </div>
+            <h1 className="text-4xl font-bold leading-10">UserName</h1>
             <p>#1 Uploader</p>
           </div>
         </div>
@@ -44,28 +41,29 @@ function User() {
         <div className="bg-orange-white rounded-xl border border-black flex-1 overflow-clip">
           <div className="flex font-bold text-xl bg-light-orange border-b-1 border-black">
             <div
-              className={`w-1/2 text-center py-0.5 ${
-                uploads ? "rounded-t-lg bg-black text-white" : ""
+              className={`w-1/2 text-center py-0.5 rounded-t-lg ${
+                uploads ? "bg-black text-white" : "cursor-pointer"
               }`}
               onClick={() => setUploads(true)}
             >
               My Uploads
             </div>
             <div
-              className={`w-1/2 text-center rounded-t-lg ${
-                uploads ? "" : "py-0.5 bg-black text-white"
+              className={`w-1/2 text-center py-0.5 rounded-t-lg ${
+                uploads ? "cursor-pointer" : "bg-black text-white"
               }`}
               onClick={() => setUploads(false)}
             >
               Bookmarks
             </div>
           </div>
-          <div className="p-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-7 gap-9">
-              {dummy_data.documents.map((document) => (
-                <Thumbnail data={document} />
-              ))}
-            </div>
+          <div className="p-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-7 gap-9">
+            {(uploads
+              ? dummy_data.documents
+              : dummy_data.documents.filter((document) => document.bookmarked)
+            ).map((document) => (
+              <Thumbnail key={document.id} data={document} />
+            ))}
           </div>
         </div>
       </div>

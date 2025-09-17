@@ -18,7 +18,9 @@ function View() {
               {faculty}
             </span>
           </p>
-          <div className="bg-light-orange py-1 px-2 rounded-full">{rating}</div>
+          <div className="bg-light-orange py-1 px-2 rounded-full flex justify-center items-center gap-2">
+            {rating} <i className="bx bxs-star" />
+          </div>
         </div>
       </div>
       <div className="View w-[816px] h-[1056px] bg-dark-orange my-8" />

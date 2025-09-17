@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Star from "./Star";
 
 function Rating() {
@@ -10,7 +10,7 @@ function Rating() {
   };
 
   return (
-    <div className="mb-8">
+    <>
       <h2 className="text-3xl">Rate the document out of 5</h2>
       <div className="flex justify-center gap-1 sm:gap-2">
         {Array.from({ length: 5 }, (_, index) => (
@@ -24,7 +24,7 @@ function Rating() {
         ))}
       </div>
       <p className="text-2xl text-center">{rating} out of 5</p>
-    </div>
+    </>
   );
 }
 

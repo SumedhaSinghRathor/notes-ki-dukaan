@@ -39,13 +39,13 @@ function Thumbnail({ data }) {
           />
         </div>
 
-        <div className="faculty w-fit hover:underline">
+        <div className="faculty w-fit hover:underline cursor-pointer">
           {data.faculty || "Anil Kumar Swain"}
         </div>
         <div className="tags_rating flex justify-between items-center w-full">
           <div className="tags flex justify-between gap-2 whitespace-nowrap overflow-clip">
-            <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border border-black text-xs">
-              {data.subject || "COA"}
+            <div className="tag bg-light-orange hover:bg-dark-orange transition-colors py-1 px-2 rounded-lg border border-black text-xs cursor-pointer">
+              {data.subject || "-"}
             </div>
           </div>
           <div className="rating flex justify-between gap-1 items-center">

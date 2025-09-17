@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
+import dummy_data from "../../assets/dummy_data.json";
 
 function UploadModal({ onClose }) {
   const modalRef = useRef();
@@ -7,6 +8,16 @@ function UploadModal({ onClose }) {
       onClose();
     }
   };
+
+  const yearKeys = dummy_data.years.map((yearObj) => Object.keys(yearObj)[0]);
+  const [selectedYear, setSelectedYear] = useState(yearKeys[0]);
+  const selectedYearObj = dummy_data.years.find(
+    (yearObj) => Object.keys(yearObj)[0] === selectedYear
+  );
+  const subjectsArr = selectedYearObj ? selectedYearObj[selectedYear] : [];
+  const subjectKeys = subjectsArr.map(
+    (subjectObj) => Object.keys(subjectObj)[0]
+  );
 
   const [image, setImage] = useState(null);
   const [fileName, setFileName] = useState("No Selected File");
@@ -74,43 +85,52 @@ function UploadModal({ onClose }) {
                 Title of Document: <br />
                 <input
                   type="text"
+                  required
                   className="bg-white border border-black rounded-lg w-full px-2 py-1 focus:outline-none"
                 />
               </label>
             </div>
-            <div className="faculty">
+            <div className="faculty flex justify-between">
               <label htmlFor="">
                 Faculty: <br />
                 <input
                   type="text"
-                  className="bg-white border border-black rounded-lg w-full px-2 py-1 focus:outline-none"
+                  required
+                  className="bg-white border border-black rounded-lg w-48 px-2 py-1 focus:outline-none"
                 />
+              </label>
+              <label htmlFor="">
+                Branch: <br />
+                <select className="bg-white w-48 border border-black rounded-lg px-2 py-1.5 focus:outline-none">
+                  <option>CSE</option>
+                  <option>IT</option>
+                  <option>CSCE</option>
+                  <option>CSSE</option>
+                </select>
               </label>
             </div>
             <div className="time flex justify-between">
-              <div className="year">
+              <label htmlFor="">
+                Year: <br />
+                <select
+                  className="bg-white border border-black rounded-lg w-48 px-2 py-1.5 focus:outline-none"
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                >
+                  {yearKeys.map((key) => (
+                    <option key={key} value={key}>
+                      {key}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <div className="subject">
                 <label htmlFor="">
-                  Branch: <br />
-                  <select className="bg-white w-44 border border-black rounded-lg px-2 py-1.5 focus:outline-none">
-                    <option>CSE</option>
-                    <option>IT</option>
-                    <option>CSCE</option>
-                    <option>CSSE</option>
-                  </select>
-                </label>
-              </div>
-              <div className="semester">
-                <label htmlFor="">
-                  Semester: <br />
-                  <select className="bg-white border border-black rounded-lg w-44 px-2 py-1.5 focus:outline-none">
-                    <option>1st</option>
-                    <option>2nd</option>
-                    <option>3rd</option>
-                    <option>4th</option>
-                    <option>5th</option>
-                    <option>6th</option>
-                    <option>7th</option>
-                    <option>8th</option>
+                  Subject: <br />
+                  <select className="bg-white border border-black rounded-lg w-48 px-2 py-1.5 focus:outline-none">
+                    {subjectKeys.map((subject) => (
+                      <option key={subject}>{subject}</option>
+                    ))}
                   </select>
                 </label>
               </div>

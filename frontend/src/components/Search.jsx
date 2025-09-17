@@ -10,7 +10,7 @@ function Search({ onSelect }) {
     const fetchName = async () => {
       const trimmed = query.trim().toLowerCase();
 
-      if (trimmed.length < 2) {
+      if (trimmed.length < 1) {
         setResults([]);
         setShowDropdown(false);
         return;
@@ -19,7 +19,7 @@ function Search({ onSelect }) {
       try {
         const filtered = dummy_data.teachers
           .filter((name) => name.toLowerCase().includes(trimmed))
-          .slice(0, 5); // limit results to top 5
+          .slice(0, 5);
 
         setResults(filtered);
         setShowDropdown(filtered.length > 0);
@@ -28,7 +28,7 @@ function Search({ onSelect }) {
       }
     };
 
-    const timeoutId = setTimeout(fetchName, 300); // debounce
+    const timeoutId = setTimeout(fetchName, 300);
     return () => clearTimeout(timeoutId);
   }, [query]);
 
@@ -42,29 +42,27 @@ function Search({ onSelect }) {
   };
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
-      <div className="relative">
-        <input
-          className="bg-white px-2 py-1 focus:outline-none border border-black rounded w-3xs selection:bg-dark-orange"
-          placeholder="Enter teacher name"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        {showDropdown && results.length > 0 && (
-          <ul className="absolute z-10 w-full bg-white border border-black overflow-y-auto max-h-60">
-            {results.map((item) => (
-              <li
-                key={item}
-                onClick={() => handleSelect(item)}
-                className="p-2 cursor-pointer hover:bg-light-orange/30"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </form>
+    <div className="relative">
+      <input
+        className="bg-white px-2 py-1 focus:outline-none border border-black rounded w-3xs selection:bg-dark-orange"
+        placeholder="Enter teacher name"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      {showDropdown && results.length > 0 && (
+        <ul className="absolute z-10 w-full bg-white border border-black overflow-y-auto max-h-60">
+          {results.map((item) => (
+            <li
+              key={item}
+              onClick={() => handleSelect(item)}
+              className="p-2 cursor-pointer hover:bg-light-orange/30"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
