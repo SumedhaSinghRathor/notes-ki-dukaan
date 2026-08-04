@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { highlightMatch } from "../../assets/functions";
 
-function Thumbnail({ data }) {
+function Thumbnail({ data, search }) {
   const [bookmark, setBookmark] = useState(data.bookmarked || false);
 
   function bookmarked() {
@@ -10,7 +11,7 @@ function Thumbnail({ data }) {
     alert(
       bookmark
         ? `${data.name} has been removed from your bookmarks`
-        : `${data.name} has been added to your bookmarks`
+        : `${data.name} has been added to your bookmarks`,
     );
   }
 
@@ -29,7 +30,7 @@ function Thumbnail({ data }) {
       <div className="info flex flex-col gap-1">
         <div className="title_bookmark flex justify-between items-center">
           <div className="title font-bold text-xl line-clamp-1 group-hover:underline">
-            {data.name || "Basic Memory Unit"}
+            {highlightMatch(data.name, search)}
           </div>
           <i
             className={`bx text-2xl flex justify-center items-center text-dark-orange ${
